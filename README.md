@@ -1,8 +1,11 @@
-﻿# Easy.Tools.GoogleCalendarEvents
+﻿# Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan
 
-This package allows you to retrieve public holiday events from [Google Public Calendars](https://developers.google.com/calendar) for Turkey.
+This package allows you to retrieve public holiday events from [Google Public Calendars](https://developers.google.com/calendar) for Azerbaijan.
 
 It uses Google Calendar API (v3) and provides a clean interface for fetching holiday data based on language preference.
+
+It builds on top of the core [`Easy.Tools.GoogleCalendarEvents`](https://www.nuget.org/packages/Easy.Tools.GoogleCalendarEvents) package, which handles low-level interaction with the Google Calendar API.
+
 
 ---
 
@@ -10,7 +13,7 @@ It uses Google Calendar API (v3) and provides a clean interface for fetching hol
 
 Install via NuGet:
 
-dotnet add package Easy.Tools.GoogleCalendarEvents
+dotnet add package Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan
 
 
 ---
@@ -24,11 +27,11 @@ dotnet add package Easy.Tools.GoogleCalendarEvents
 
 ## Usage
 
-### Fetch Turkish Holidays
+### Fetch Azerbaijan Holidays
 
 
 var service = new HolidayService("YOUR_GOOGLE_API_KEY");
-var holidays = await service.GetHolidaysAsync(CalendarLanguage.Turkish);
+var holidays = await service.GetHolidaysAsync(CalendarLanguage.Azerbaijani);
 
 foreach (var item in holidays)
 {
@@ -42,19 +45,9 @@ foreach (var item in holidays)
 
 Supported calendar languages:
 
-* `CalendarLanguage.Turkish` → `tr.turkish#holiday@group.v.calendar.google.com`
-* `CalendarLanguage.English` → `en.turkish.official#holiday@group.v.calendar.google.com`
-
----
-
-## Testing
-
-Unit tests are located under `Easy.Tools.GoogleCalendarEvents.Tests`.
-You can run the tests via:
-
-```bash
-dotnet test
-```
+* `CalendarLanguage.Azerbaijani` → `az-az.azerbaijan#holiday@group.v.calendar.google.com`
+* `CalendarLanguage.Turkish` → `tr-tr.azerbaijan#holiday@group.v.calendar.google.com`
+* `CalendarLanguage.English` → `en-gb.azerbaijan#holiday@group.v.calendar.google.com`
 
 ---
 
