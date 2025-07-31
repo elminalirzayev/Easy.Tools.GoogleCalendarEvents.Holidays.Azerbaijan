@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<PackageId>Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</PackageId>
+		<Version>1.0.3</Version>
+		<Authors>Elmin Alirzayev</Authors>
+		<Company>Easy Code Tools</Company>
+		<Description>This package allows you to retrieve public holiday events from Google Public Calendars for Azerbaijan.</Description>
+		<PackageTags>google calendar holidays events dotnet azerbaijan azerbaycan azirbaycan  bayram tetil tatil</PackageTags>
+		<RepositoryUrl>https://github.com/elminalirzayev/Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/elminalirzayev/Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Easy.Tools.GoogleCalendarEvents" Version="1.0.6" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="README.md">
+			<Pack>true</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+
+</Project>
