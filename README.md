@@ -20,9 +20,9 @@ It builds on top of the core [`Easy.Tools.GoogleCalendarEvents`](https://www.nug
 ## Installation
 
 Install via NuGet:
-
+```
 dotnet add package Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan
-
+```
 
 ---
 
