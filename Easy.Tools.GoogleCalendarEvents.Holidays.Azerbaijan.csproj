@@ -23,19 +23,24 @@
 		<AssemblyTitle>Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</AssemblyTitle>
 		<AssemblyName>Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</AssemblyName>
 		<PackageId>Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</PackageId>
-		<Version>1.0.13</Version>
+		<Version>1.1.0</Version>
 		<PackageIcon>icon.png</PackageIcon>
 		<Authors>Elmin Alirzayev</Authors>
 		<Company>Easy Code Tools</Company>
 		<Copyright>Copyright © Elmin Alirzayev 2025</Copyright>
-		<Description>This package allows you to retrieve public holiday events from Google Public Calendars for Azerbaijan.</Description>
-		<PackageTags>google calendar holidays events dotnet azerbaijan azerbaycan azerbaycan tətil bayram tetil tatil</PackageTags>
+		<Description>A dedicated .NET library to fetch official holidays and public events for Azerbaijan using Google Calendar API.</Description>
+		<PackageTags>azerbaijan azerbaycan azərbaycan tətil təqvim holidays bayramlar google calendar events dotnet</PackageTags>
 		<RepositoryUrl>https://github.com/elminalirzayev/Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/elminalirzayev/Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageReleaseNotes>-</PackageReleaseNotes>
+		<PackageReleaseNotes>
+			New Features:
+			- Multi-language support (Azerbaijani &amp; English).
+			- Renamed service to 'AzerbaijanHolidaysService' for better clarity.
+			- Full backward compatibility with legacy 'HolidayService'.
+		</PackageReleaseNotes>
 
 		<!-- Build -->
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -61,7 +66,7 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="Easy.Tools.GoogleCalendarEvents" Version="1.0.12" />
+		<PackageReference Include="Easy.Tools.GoogleCalendarEvents" Version="1.0.14" />
 	</ItemGroup>
 
 </Project>
