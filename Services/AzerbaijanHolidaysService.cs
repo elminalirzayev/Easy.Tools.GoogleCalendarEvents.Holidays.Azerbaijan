@@ -1,9 +1,7 @@
-﻿using Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Enums;
-using Easy.Tools.GoogleCalendarEvents.Models;
-using Easy.Tools.GoogleCalendarEvents.Services;
+﻿using Easy.Tools.GoogleCalendarEvents;
 using System.Net.Http;
 
-namespace Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Services
+namespace Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan
 {
     /// <summary>
     /// Provides functionality to fetch official holidays for Azerbaijan from Google Calendar.
@@ -14,8 +12,10 @@ namespace Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Services
         private readonly HttpClient _httpClient;
 
         // Google Calendar IDs for Azerbaijan
-        private const string CalendarIdAz = "az-az.azerbaijan#holiday@group.v.calendar.google.com";
-        private const string CalendarIdEn = "en-gb.azerbaijan#holiday@group.v.calendar.google.com";
+        private const string CalendarIdAz = "az.az#holiday@group.v.calendar.google.com";
+        private const string CalendarIdEn = "en-gb.az#holiday@group.v.calendar.google.com";
+        private const string CalendarIdTr = "tr.az#holiday@group.v.calendar.google.com";
+        private const string CalendarIdRu = "ru.az#holiday@group.v.calendar.google.com";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AzerbaijanHolidaysService"/> class.
@@ -34,11 +34,14 @@ namespace Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Services
         /// <param name="language">Language of the holiday names (Azerbaijani or English).</param>
         /// <param name="cancellationToken">Cancellation token.</param>
         /// <returns>List of holiday items.</returns>
-        public async Task<IReadOnlyList<Item>> GetHolidaysAsync(HolidayLanguage language = HolidayLanguage.Azerbaijani, CancellationToken cancellationToken = default)
+        public async Task<IReadOnlyList<GoogleCalendarEvent>> GetHolidaysAsync(HolidayLanguage language = HolidayLanguage.Azerbaijani, CancellationToken cancellationToken = default)
         {
             var calendarId = language switch
             {
                 HolidayLanguage.English => CalendarIdEn,
+                HolidayLanguage.Russian => CalendarIdRu,
+                HolidayLanguage.Turkish => CalendarIdTr,
+                HolidayLanguage.Azerbaijani => CalendarIdAz,
                 _ => CalendarIdAz // Default Azerbaijani
             };
 

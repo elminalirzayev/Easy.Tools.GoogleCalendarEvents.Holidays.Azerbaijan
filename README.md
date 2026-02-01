@@ -39,7 +39,7 @@ dotnet add package Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan
 By default, the service returns holiday names in Azerbaijani (e.g., "Novruz Bayramı").
 
 ```csharp
-using Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Services;
+using Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan;
 
 var apiKey = "YOUR_GOOGLE_API_KEY";
 
@@ -62,8 +62,7 @@ foreach (var h in holidays)
 You can explicitly request holiday names in English (e.g., "Novruz Holiday").
 
 ```csharp
-using Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Services;
-using Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan.Enums;
+using Easy.Tools.GoogleCalendarEvents.Holidays.Azerbaijan;
 
 var apiKey = "YOUR_GOOGLE_API_KEY";
 var service = new AzerbaijanHolidaysService(apiKey);
@@ -102,6 +101,14 @@ Includes all official public holidays in Azerbaijan:
 
 -   Internet access for fetching calendar data
 
+
+---
+
+## Contributing
+
+Contributions and suggestions are welcome. Please open an issue or submit a pull request.
+
+---
 
 ## License
 
